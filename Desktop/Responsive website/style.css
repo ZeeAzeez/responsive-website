@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Root Variables */
+:root {
+  --color-primary: rgba(32, 7, 59);
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: rgba(250, 248, 254);
+  --color-dark: #363949;
+  --color-light: rgba(29, 10, 50);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #e0e0e8;
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    /* text-decoration: none; */
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background-color: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+.header{
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    height: 700px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+.navbar .logo{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.apply-link{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+.green{
+    text-decoration-line: underline;
+    text-decoration-color: #41f1b6;
+}
+.header-text{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 50px;
+}
+.btn{
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    background-color: var(--color-success);
+    font-weight: 500;
+    border: 1px solid var(--color-success);
+    padding: 18px 20px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+.btn:hover{
+    background-color: var(--color-white);
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
+}
+
+.categories{
+    margin: 60px;
+    margin-top: 150px;
+    /* background-color: var(--color-info-light); */
+}
+.rows{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.col-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.num{
+    font-size: 1rem;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 10px 20px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+.col-3 h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    white-space: nowrap;
+    margin-bottom: 25px;
+}
+.col-3 p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-info-dark);
+    margin-bottom: 25px;
+}
+.last-section{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 15px;
+    width: 80%;
+    margin: auto;
+}
+.profile-pic img {
+    width: 350px; 
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.col-2{
+    padding: 50px;
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-top: 100px;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    margin-left: -100px;
+    width: 50%;
+}
+.col-2 h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    white-space: nowrap;
+}
+.col-2 p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.col-2 .apply-btn{
+    color: var(--color-primary);
+    font-size: 1rem;
+    background-color: var(--color-success);
+    font-weight: 500;
+    border: 1px solid var(--color-success);
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+.col-2 .apply-btn:hover{
+    background-color: var(--color-white);
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
+}
+.footer{
+    padding: 15px;
+    text-align: center;
+    margin-top: 50px;
+}
+.footer-logo{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-primary);
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 1.3rem;
+    gap: 15px;
+}
+
+/* Media query for tablet devices */
+@media screen and (max-width: 1200px){
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+    .navbar .logo{
+        font-size: 2.2rem;
+        display: flex;
+        align-items: center;
+    }
+    .apply-link{
+        font-size: 1.4rem;
+    }
+    .btn{
+        font-size: 1rem;
+        padding: 15px 15px;
+    }
+    .header-text{
+        font-size: 2rem;
+    }
+    .categories{
+        margin-top: 200px;
+
+    }
+    .rows{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+    }
+    .col-3{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }  
+    .num{
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-right: 20px;
+    }
+    .col-3-content {
+        flex-grow: 1;
+        text-align: left;
+    } 
+    .col-3 h4{
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    .col-3 p{
+        font-size: 1rem;
+    }
+    .last-section{
+        padding: 15px;
+    }
+    .profile-pic img {
+        width: 250px; 
+        height: 250px;
+    }
+    .col-2{
+        padding: 30px;
+        margin-top: 250px;
+        height: 300px;
+        position: relative;
+        z-index: 1;
+        margin-left: -100px;
+        width: 70%;
+    }
+    .col-2 h1{
+        font-size: 2.3rem;
+        margin-bottom: 20px;
+    }
+    .col-2 p{
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .col-2 .apply-btn{
+        font-size: 1rem;
+        padding: 10px 15px;
+        margin-top: 15px;
+    }
+    .footer-logo{
+        font-size: 2.1rem;
+    }
+    .social-icons{
+        font-size: 1.6rem;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        gap: 25px;
+    }
+}
+
+/* media screen for mobile */
+@media screen and (max-width: 768px){
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .navbar .logo {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+    }
+    .apply-link {
+        font-size: 1.2rem;
+    }
+    .header-text {
+        font-size: 1.5rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 15px 15px;
+    }
+    .col-3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .col-3 h4 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .col-3 p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .last-section {
+       position: relative;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       /* height: 100vh; */
+    }
+    .profile-pic img {
+        width: 300px;
+        height: 300px;
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        z-index: 1; 
+    }
+    .col-2 {
+        padding: 30px;
+        margin-top: 250px;
+        margin-left: 10px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
+    .col-2 h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+
+    }
+    .col-2 p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .col-2 .apply-btn {
+        font-size: 1rem;
+        padding: 10px 15px;
+        margin-top: 15px; 
+    }
+
+}
+
